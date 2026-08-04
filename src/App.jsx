@@ -132,7 +132,7 @@ function App() {
           <p className="script-label">Keep the date close</p>
           <h2>Our wedding invitation</h2>
           <p className="download-copy">Save a copy of our invitation to your phone or computer.</p>
-          <a className="download-button" href="/assets/wedding-invitation.png" download="D-Yvette-and-J-Pierre-Wedding-Invitation.png">Download invitation ↓</a>
+          <a className="download-button" href="/assets/new_invitation.png" download="D-Yvette-and-J-Pierre-Wedding-Invitation.png">Download invitation ↓</a>
         </div>
       </section>
 
