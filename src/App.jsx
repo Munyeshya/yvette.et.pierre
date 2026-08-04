@@ -55,7 +55,7 @@ function MelodyControl() {
     else { audio.pause(); setPlaying(false) }
   }
 
-  return <><audio ref={audioRef} src="/assets/invitation-wedding-375839.mp3" preload="none" loop /><button className="melody-control" type="button" onClick={toggle} aria-label={playing ? 'Mute background melody' : 'Play background melody'}>{playing ? '♪ Sound on' : '♪ Play music'}</button></>
+  return <><audio ref={audioRef} src="/assets/invitation-wedding-375839.mp3" preload="auto" autoPlay playsInline loop /><button className="melody-control" type="button" onClick={toggle} aria-label={playing ? 'Mute background melody' : 'Play background melody'}>{playing ? '♪ Sound on' : '♪ Play music'}</button></>
 }
 
 function App() {
@@ -111,7 +111,7 @@ function App() {
           <Ornament />
           <div className="date-card">
             <div><span>Saturday</span><strong>10</strong><span>October</span></div>
-            <div className="venue-copy"><span>The celebration will take place at</span><h3>Kigali Prime Garden</h3><p>Kigali, Rwanda</p><a href="https://www.google.com/maps/search/?api=1&query=Kigali+Prime+Garden" target="_blank" rel="noreferrer">View location ↗</a></div>
+            <div className="venue-copy"><span>The celebration will take place at</span><h3>Kigali Prime Garden</h3><p>Kigali, Rwanda</p><a href="https://www.google.com/maps/search/?api=1&query=Kigali+Prime+Garden" target="_blank" rel="noreferrer"><span>View location</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-9 9M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" /></svg></a></div>
           </div>
           <div className="countdown-wrap">
             <p className="kicker">Counting down to forever</p>
