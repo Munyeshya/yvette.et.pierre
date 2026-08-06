@@ -55,7 +55,7 @@ function MelodyControl() {
     else { audio.pause(); setPlaying(false) }
   }
 
-  return <><audio ref={audioRef} src="/assets/invitation-wedding-375839.mp3" preload="auto" autoPlay playsInline loop /><button className="melody-control" type="button" onClick={toggle} aria-label={playing ? 'Mute background melody' : 'Play background melody'}>{playing ? '♪ Sound on' : '♪ Play music'}</button></>
+  return <><audio ref={audioRef} src="/assets/i-think-they-call-this-love.mp3" preload="auto" autoPlay playsInline loop /><button className="melody-control" type="button" onClick={toggle} aria-label={playing ? 'Mute background melody' : 'Play background melody'}>{playing ? '♪ Sound on' : '♪ Play music'}</button></>
 }
 
 function App() {
