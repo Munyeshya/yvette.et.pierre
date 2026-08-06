@@ -157,7 +157,7 @@ function App() {
           <p className="contact-intro">For questions or additional information, please feel free to call.</p>
           <div className="contact-grid">
             <article><span>The bride</span><h3>D. Yvette</h3><a href="tel:+250788328805">0788 328 805</a><a href="tel:+250788400620">0788 400 620</a><a href="tel:+250788775352">0788 775 352</a></article>
-            <article><span>The groom</span><h3>N. Jean Pierre</h3><a href="tel:+250780329903">0780 329 903</a></article>
+            <article><span>The groom</span><h3>N. Jean Pierre</h3><a href="tel:+250780329903">0780 329 903</a><a href="tel:+250788632460">0788 632 460</a><a href="tel:+250788853026">0788 853 026</a></article>
           </div>
         </div>
       </section>
