@@ -76,7 +76,7 @@ function App() {
         <p className="hero-copy">Together with their families, joyfully invite you to celebrate their wedding.</p>
         <div className="hero-meta"><span>10 October 2026</span><span className="dot">•</span><span>Kigali Prime Garden</span></div>
         <div className="hero-photo">
-          <img src="/image1.jpeg" alt="D. Yvette and J.Pierre smiling together" width="720" height="1080" fetchPriority="high" />
+          <img src="/image1.jpeg" alt="D. Yvette and J.Pierre smiling together" width="1041" height="1080" fetchPriority="high" />
           <div className="photo-frame" />
         </div>
         <a className="scroll-cue" href="#invitation" aria-label="Continue to invitation">↓</a>
@@ -123,7 +123,7 @@ function App() {
       </section>
 
       <section className="portrait-section">
-        <img src="/image2.jpeg" alt="Portrait of D. Yvette and J.Pierre" width="853" height="1280" loading="lazy" decoding="async" />
+        <img src="/image2.jpeg" alt="Portrait of D. Yvette and J.Pierre" width="1033" height="1080" loading="lazy" decoding="async" />
         <div className="portrait-overlay"><span>Our forever begins</span><strong>10 · 10 · 2026</strong></div>
       </section>
 
