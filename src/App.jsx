@@ -60,8 +60,18 @@ function MelodyControl() {
 
 function App() {
   const countdown = useCountdown()
+  const [copiedAccount, setCopiedAccount] = useState('')
   const openMomo = () => {
     window.location.href = 'tel:*182*1*1*0788328805%23'
+  }
+  const copyAccount = async (account) => {
+    try {
+      await navigator.clipboard.writeText(account)
+      setCopiedAccount(account)
+      window.setTimeout(() => setCopiedAccount(''), 1800)
+    } catch {
+      setCopiedAccount('')
+    }
   }
 
   return (
@@ -142,8 +152,8 @@ function App() {
           <h2>Celebrate our new beginning</h2>
           <p className="momo-intro">Your presence is our greatest gift. For those who wish to bless us further, you may send your gift through Mobile Money or bank transfer.</p>
           <div className="gift-accounts">
-            <article className="gift-account"><img src="/assets/im-bank.webp" alt="I&M Bank" width="54" height="42" loading="lazy" /><span>I&amp;M Bank</span><strong>20041092002</strong><p>Ndagijimana Jean Pierre</p></article>
-            <article className="gift-account"><img src="https://equitygroupholdings.com/wp-content/themes/equity/assets/img/equity-bank-logo.png" alt="Equity" width="54" height="42" loading="lazy" decoding="async" onError={(event) => { event.currentTarget.src = '/assets/equity-bank.webp' }} /><span>Equity Bank</span><strong>4777111589027</strong><p>Dusabimana Yvette</p></article>
+            <button className="gift-account bank-account" type="button" onClick={() => copyAccount('20041092002')} aria-label="Copy I&M Bank account number 20041092002"><img src="/assets/im-bank.webp" alt="I&M Bank" width="54" height="42" loading="lazy" /><span>I&amp;M Bank</span><strong>20041092002</strong><p>Ndagijimana Jean Pierre</p><small>{copiedAccount === '20041092002' ? 'Copied!' : 'Copy account number'}</small></button>
+            <button className="gift-account bank-account" type="button" onClick={() => copyAccount('4777111589027')} aria-label="Copy Equity Bank account number 4777111589027"><img src="https://equitygroupholdings.com/wp-content/themes/equity/assets/img/equity-bank-logo.png" alt="Equity" width="54" height="42" loading="lazy" decoding="async" onError={(event) => { event.currentTarget.src = '/assets/equity-bank.webp' }} /><span>Equity Bank</span><strong>4777111589027</strong><p>Dusabimana Yvette</p><small>{copiedAccount === '4777111589027' ? 'Copied!' : 'Copy account number'}</small></button>
             <button className="gift-account momo-account" type="button" onClick={openMomo}><img src="/assets/mtn-momo.webp" alt="MTN MoMo" width="54" height="42" loading="lazy" /><span>MTN Mobile Money</span><strong>0788328805</strong><p>Dusabimana Yvette</p><small>Tap to open MoMo</small></button>
           </div>
           <p className="ussd-note">The MoMo card opens <strong>*182*1*1*0788328805#</strong>. Enter the amount and confirm securely on your phone.</p>

@@ -118,6 +118,10 @@ blockquote cite{display:block;margin-top:16px;color:var(--blue);font:600 9px Mon
 .gift-account span{display:block;color:var(--blue);font:600 8px Montserrat,sans-serif;letter-spacing:.15em;text-transform:uppercase}
 .gift-account strong{display:block;margin:12px 0 7px;color:var(--navy-800);font:500 clamp(17px,2vw,23px) 'Cormorant Garamond',serif;letter-spacing:.03em;overflow-wrap:anywhere}
 .gift-account p{margin:0;color:var(--muted);font:400 10px/1.55 Montserrat,sans-serif}
+.bank-account{cursor:pointer;appearance:none;transition:transform .2s,box-shadow .2s}
+.bank-account:hover{transform:translate(-2px,-2px);box-shadow:11px 11px 0 #cfdae4}
+.bank-account:focus-visible,.momo-account:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.bank-account small{display:block;margin-top:18px;color:var(--navy-700);font:600 8px Montserrat,sans-serif;letter-spacing:.11em;text-transform:uppercase}
 .momo-account{cursor:pointer;position:relative;transition:transform .2s,box-shadow .2s}
 .momo-account:hover{transform:translate(-2px,-2px);box-shadow:11px 11px 0 #cfdae4}
 .momo-account img{background:#fff;filter:grayscale(1)}
