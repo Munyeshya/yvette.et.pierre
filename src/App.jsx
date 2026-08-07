@@ -61,8 +61,8 @@ function MelodyControl() {
 function App() {
   const countdown = useCountdown()
   const [copiedAccount, setCopiedAccount] = useState('')
-  const openMomo = () => {
-    window.location.href = 'tel:*182*1*1*0788328805%23'
+  const openMomo = (recipient) => {
+    window.location.href = `tel:*182*1*1*${recipient}%23`
   }
   const copyAccount = async (account) => {
     try {
@@ -124,9 +124,11 @@ function App() {
             <div className="venue-copy"><span>The celebration will take place at</span><h3>Kigali Prime Garden</h3><p>Kigali, Rwanda</p><a href="https://www.google.com/maps/search/?api=1&query=Kigali+Prime+Garden" target="_blank" rel="noreferrer"><span>View location</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-9 9M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" /></svg></a></div>
           </div>
           <div className="dress-code">
-            <span>Attire note</span>
-            <h3>One colour, beautifully yours</h3>
-            <p>To create a beautifully harmonious celebration, we kindly invite each guest to wear one solid colour of their choice.</p>
+            <div className="attire-icons" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M26 8h12l4 11-7 8 12 25H17l12-25-7-8 4-11Z"/><path d="M27 8c0 4 2 7 5 7s5-3 5-7"/></svg>
+              <svg viewBox="0 0 64 64"><path d="M23 8h18l8 9-7 8v29H22V25l-7-8 8-9Z"/><path d="m25 8 7 11 7-11M32 19v35M22 30h-6M42 30h6"/></svg>
+            </div>
+            <div className="dress-code-copy"><span>Dress code</span><h3>One colour, beautifully yours</h3><p>To create a beautifully harmonious celebration, we kindly invite each guest to wear one solid colour of their choice.</p></div>
           </div>
           <div className="countdown-wrap">
             <p className="kicker">Counting down to forever</p>
@@ -159,9 +161,10 @@ function App() {
           <div className="gift-accounts">
             <button className="gift-account bank-account" type="button" onClick={() => copyAccount('20041092002')} aria-label="Copy I&M Bank account number 20041092002"><img src="/assets/im-bank.webp" alt="I&M Bank" width="54" height="42" loading="lazy" /><span>I&amp;M Bank</span><strong>20041092002</strong><p>Ndagijimana Jean Pierre</p><small>{copiedAccount === '20041092002' ? 'Copied!' : 'Copy account number'}</small></button>
             <button className="gift-account bank-account" type="button" onClick={() => copyAccount('4777111589027')} aria-label="Copy Equity Bank account number 4777111589027"><img src="https://equitygroupholdings.com/wp-content/themes/equity/assets/img/equity-bank-logo.png" alt="Equity" width="54" height="42" loading="lazy" decoding="async" onError={(event) => { event.currentTarget.src = '/assets/equity-bank.webp' }} /><span>Equity Bank</span><strong>4777111589027</strong><p>Dusabimana Yvette</p><small>{copiedAccount === '4777111589027' ? 'Copied!' : 'Copy account number'}</small></button>
-            <button className="gift-account momo-account" type="button" onClick={openMomo}><img src="/assets/mtn-momo.webp" alt="MTN MoMo" width="54" height="42" loading="lazy" /><span>MTN Mobile Money</span><strong>0788328805</strong><p>Dusabimana Yvette</p><small>Tap to open MoMo</small></button>
+            <button className="gift-account momo-account" type="button" onClick={() => openMomo('0788328805')}><img src="/assets/mtn-momo.webp" alt="MTN MoMo" width="54" height="42" loading="lazy" /><span>MTN Mobile Money · Bride</span><strong>0788328805</strong><p>Dusabimana Yvette</p><small>Tap to open MoMo</small></button>
+            <button className="gift-account momo-account" type="button" onClick={() => openMomo('0780329903')}><img src="/assets/mtn-momo.webp" alt="MTN MoMo" width="54" height="42" loading="lazy" /><span>MTN Mobile Money · Groom</span><strong>0780329903</strong><p>Ndagijimana Jean Pierre</p><small>Tap to open MoMo</small></button>
           </div>
-          <p className="ussd-note">The MoMo card opens <strong>*182*1*1*0788328805#</strong>. Enter the amount and confirm securely on your phone.</p>
+          <p className="ussd-note">Each MoMo card opens the selected recipient directly. Enter the amount and confirm securely on your phone.</p>
         </div>
       </section>
 
