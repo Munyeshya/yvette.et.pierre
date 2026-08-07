@@ -126,7 +126,7 @@ function App() {
           <div className="dress-code">
             <span>Attire note</span>
             <h3>One colour, beautifully yours</h3>
-            <p>To create a beautifully harmonious celebration, we kindly invite each guest to wear one solid colour of their choice. Please avoid mixing multiple colours in the same outfit.</p>
+            <p>To create a beautifully harmonious celebration, we kindly invite each guest to wear one solid colour of their choice.</p>
           </div>
           <div className="countdown-wrap">
             <p className="kicker">Counting down to forever</p>
